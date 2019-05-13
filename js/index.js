@@ -90,3 +90,17 @@ contactInfo[2].textContent = siteContent['contact']['email'];
 
 let footerInfo = document.querySelector('footer p');
 footerInfo.textContent = siteContent['footer']['copyright'];
+
+const navBar = document.querySelector('nav');
+
+//append child
+const appendNav = document.createElement('a');
+appendNav.textContent = 'Learn More';
+navBar.appendChild(appendNav);
+
+//prepend child
+const prependNav = document.createElement('a');
+prependNav.textContent = 'Home';
+navBar.prepend(prependNav);
+
+//change color nav text to green
