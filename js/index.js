@@ -46,7 +46,7 @@ const siteContent = {
 //navbar
 let navItems = document.querySelectorAll('a');
 // navItems.forEach(item => {
-//   item.textContent = siteContent['nav']['nav-item-1'];
+//   item.textContent = siteContent[0][0];
 // });
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
@@ -57,7 +57,7 @@ navItems[5].textContent = siteContent['nav']['nav-item-6'];
 
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
-logo.setAttribute('src', siteContent['nav']['img-src']);
+logo.src = siteContent['nav']['img-src'];
 
 let ctaHeader = document.querySelector('h1');
 ctaHeader.textContent = siteContent['cta']['h1'];
@@ -66,7 +66,7 @@ let ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent['cta']['button'];
 
 let ctaImg = document.getElementById('cta-img');
-ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+ctaImg.src = siteContent['cta']['img-src'];
 
 let headerH4 = document.querySelectorAll('h4');
 headerH4[0].textContent = siteContent['main-content']['features-h4'];
@@ -84,7 +84,7 @@ mainContent[3].textContent = siteContent['main-content']['product-content'];
 mainContent[4].textContent = siteContent['main-content']['vision-content'];
 
 let mainImg = document.getElementById('middle-img');
-mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+mainImg.src = siteContent['main-content']['middle-img-src'];
 
 let contactInfo = document.querySelectorAll('.contact p');
 contactInfo[0].textContent = siteContent['contact']['address'];
@@ -94,19 +94,19 @@ contactInfo[2].textContent = siteContent['contact']['email'];
 let footerInfo = document.querySelector('footer p');
 footerInfo.textContent = siteContent['footer']['copyright'];
 
-const navBar = document.querySelector('nav');
 //append child
-let appendNav = document.createElement('a');
-appendNav.textContent = 'Learn More';
-navBar.appendChild(appendNav);
+let appendChild = document.createElement('a');
+appendChild.textContent = 'Learn More';
+document.querySelector('nav').appendChild(appendChild);
 
 //prepend child
 let prependNav = document.createElement('a');
 prependNav.textContent = 'Home';
-navBar.prepend(prependNav);
+document.querySelector('nav').prepend(prependNav);
 
 //change color nav text to green
 navItems = document.querySelectorAll('a');
 navItems.forEach(item => {
   item.style.color = 'green';
 });
+
