@@ -31,6 +31,7 @@ const siteContent = {
     'vision-content':
       'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
   },
+
   contact: {
     'contact-h4': 'Contact',
     address: '123 Way 456 Street Somewhere, USA',
@@ -81,3 +82,12 @@ mainContent[4].textContent = siteContent['main-content']['vision-content'];
 
 let mainImg = document.getElementById('middle-img');
 mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[1].textContent = siteContent['contact']['address'];
+contactInfo[2].textContent = siteContent['contact']['phone'];
+contactInfo[3].textContent = siteContent['contact']['email'];
+
+//   footer: {
+//     copyright: 'Copyright Great Idea! 2018',
+//   },
