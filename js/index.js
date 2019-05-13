@@ -44,7 +44,10 @@ const siteContent = {
 };
 
 //navbar
-const navItems = document.querySelectorAll('a');
+let navItems = document.querySelectorAll('a');
+// navItems.forEach(item => {
+//   item.textContent = siteContent['nav']['nav-item-1'];
+// });
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
 navItems[1].textContent = siteContent['nav']['nav-item-2'];
 navItems[2].textContent = siteContent['nav']['nav-item-3'];
@@ -92,15 +95,18 @@ let footerInfo = document.querySelector('footer p');
 footerInfo.textContent = siteContent['footer']['copyright'];
 
 const navBar = document.querySelector('nav');
-
 //append child
-const appendNav = document.createElement('a');
+let appendNav = document.createElement('a');
 appendNav.textContent = 'Learn More';
 navBar.appendChild(appendNav);
 
 //prepend child
-const prependNav = document.createElement('a');
+let prependNav = document.createElement('a');
 prependNav.textContent = 'Home';
 navBar.prepend(prependNav);
 
 //change color nav text to green
+navItems = document.querySelectorAll('a');
+navItems.forEach(item => {
+  item.style.color = 'green';
+});
