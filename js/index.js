@@ -56,13 +56,13 @@ navItems[5].textContent = siteContent['nav']['nav-item-6'];
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-const ctaHeader = document.querySelector('h1');
+let ctaHeader = document.querySelector('h1');
 ctaHeader.textContent = siteContent['cta']['h1'];
 
-const ctaBtn = document.querySelector('button');
+let ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent['cta']['button'];
 
-const ctaImg = document.getElementById('cta-img');
+let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
 let headerH4 = document.querySelectorAll('h4');
@@ -84,10 +84,9 @@ let mainImg = document.getElementById('middle-img');
 mainImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 let contactInfo = document.querySelectorAll('.contact p');
-contactInfo[1].textContent = siteContent['contact']['address'];
-contactInfo[2].textContent = siteContent['contact']['phone'];
-contactInfo[3].textContent = siteContent['contact']['email'];
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
 
-//   footer: {
-//     copyright: 'Copyright Great Idea! 2018',
-//   },
+let footerInfo = document.querySelector('footer p');
+footerInfo.textContent = siteContent['footer']['copyright'];
